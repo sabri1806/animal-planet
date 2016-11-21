@@ -43,7 +43,7 @@
 						<li class="dropdown">
 						  <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Más<span class="caret"></span></a>
 						  <ul role="menu" class="dropdown-menu">
-					       <li><a href="#">Contacto</a></li>
+					      <li><a href="contactos.html">Contacto</a></li>
 					      <li><a href="#">Ayuda</a></li>
 					      <li><a href="#">RRHH</a></li>
 						 	</ul>
@@ -56,10 +56,11 @@
 
 	<!-- origen -->
 	<div class="row section-page">
-		<div class="col-xs-12">
-		  <h2>Te contamos como nace el proyecto:</h2>
-		  <p>Se inició hace dos años y medio con el objetivo de mejorar, proteger y defender a los animales que están en peligro de extinción. Según su presidente, José Francisco Maciá, se definen como “una Asociación Protectora de Animales. Su labor y la de su equipo es luchar por la seguridad y los derechos de los animales, tanto domésticos como salvajes.</p>
-		  <img class="seccion-media" src="./img/fondo3.jpg" style="width: 948px;" />
+		<div class="col-xs-12 imageContainer">
+      <p style="position: absolute;top: 200px;left: 0;width: 100%;">
+          <h2 >Te contamos como nace el proyecto:</h2>
+          Se inició hace dos años y medio con el objetivo de mejorar, proteger y defender a los animales que están en peligro de extinción. Según su presidente, José Francisco Maciá, se definen como “una Asociación Protectora de Animales. Su labor y la de su equipo es luchar por la seguridad y los   derechos de los animales, tanto domésticos como salvajes.
+      </p>
 		</div>	
 			
 	</div>  
@@ -68,7 +69,7 @@
 	<div class="row section-page-map">
 		<div class="col-xs-6" style="height: 400px; border: 1px solid">
 	     	<h3><a href="#" title="Ranking" style="height: 336px;">Ranking de los animales con mayor peligro de extincion.</a></h3>
-		<video src="vid/animals.mp4" controls>
+    		<video src="vid/animals.mp4" controls style="height: 285px;">
        			Tu navegador no implementa el elemento 
        			<code>video</code>.
         </video>
@@ -81,7 +82,9 @@
 					<img class="infografia2" src="./img/informacion.jpg" style="height: 359px;"/>
 				</div>
 				<div style="padding: 25px">
-		           <a href="http://www.upsocl.com/verde/estos-son-los-20-paises-con-mas-especies-en-peligro-de-extincion-en-el-mundo/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://www.upsocl.com/verde/estos-son-los-20-paises-con-mas-especies-en-peligro-de-extincion-en-el-mundo/', '\n\n');">
+          <a href="http://www.upsocl.com/verde/estos-son-los-20-paises-con-mas-especies-en-peligro-de-extincion-en-el-mundo/" target="_blank" 
+            onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://www.upsocl.com/verde/estos-son-los-20-paises-con-mas-especies-en-peligro-de-extincion-en-el-mundo/', '\n\n');">
+          </a>
 		  		<img src="img/internet_icon.png"  width="120px" height="100px" alt="internet_icon">
 		  		<p>Podés buscar más informacion sobre esta problemática.</p>
 				</div>
@@ -94,7 +97,12 @@
 <!-- Significado animal en extincion -->
 	<div class="row section-page"> 
 		<div class="col-xs-4 article-ani" style="margin-top: 130px;">
-        Name: <input type="text" name="fullname">
+      <form>
+        <label>Nombre: </label>
+        <input type="text" name="fullname">
+        <label>Apellido: </label>
+        <input type="text" name="fullname">
+      </form>
 		</div>
 		<article class="col-xs-7 col-xs-12 col-xs-10 article-ani">
 			<h2>Historia</h2>
@@ -106,12 +114,17 @@
 		
 	</div>
 
-	<div class="col-xs-12">
-			<img src="./img/ani_logo.jpg"/>
-		  <h2>Cuidados</h2>
-		  <p>Conocé más sobre la diversidad de animales que ya fueron afectados y hoy ya se encuentran en extinción</p>  
-	</div>
 
+	<!-- Footer: Datos útiles -->
+  <div class="row">
+    <div class="col-xs-4">
+      <img src="./img/ani_logo.jpg" style="height: 250px;"/>
+    </div>
+    <div class="col-xs-8">
+      <h2>Cuidados</h2>
+      <p>Conocé más sobre la diversidad de animales que ya fueron afectados y hoy ya se encuentran en extinción</p>  
+    </div>
+  </div>
 	<!-- Footer: Datos útiles -->
 	<footer class="row section-page footer-ani-dos">
 		<div class="col-xs-4">

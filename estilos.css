@@ -138,12 +138,17 @@ textarea{
 ::-moz-placeholder{color:black;}
 
 .mapa-img{
-    height: 500px;
-    width: 461px;
-
+    width: 723px;
 }
 .news-sm{
 	padding: 33px;
     background-color: grey;
     border-bottom-style: double;
 }
+
+
+ .imageContainer {
+    width:100%; 
+    height:200px; 
+    background-image: url('./img/fondo3.jpg');
+ }
