@@ -26,19 +26,14 @@
 				<div id="navbar-inverse" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 				    <li><a href="inicio_sa.html">Inicio</a></li>
-				    <li class="active"><a href="donde_estamos.html">Donde estamos</a></li>
+				    <li class="active"><a href="#">Donde estamos</a></li>
 				    <li><a href="historia.html">Historia</a></li>
 				    <li><a href="conoce_anix.html">Conoce Anix</a></li>
 						<li class="dropdown">
-						  <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Desplegable<span class="caret"></span></a>
-						  <ul role="menu" class="dropdown-menu">
-					      <li><a href="#">Action</a></li>
-					      <li><a href="#">Another action</a></li>
-					      <li><a href="#">Something else here</a></li>
-					      <li class="divider"></li>
-					      <li class="dropdown-header">Nav header</li>
-					      <li><a href="#">Separated link</a></li>
-					      <li><a href="#">One more separated link</a></li>
+						  <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Más<span class="caret"></span></a>
+						  <li><a href="#">Contacto</a></li>
+					      <li><a href="#">Ayuda</a></li>
+					      <li><a href="#">RRHH</a></li>
 						 	</ul>
 						</li>
 					</ul>
@@ -63,12 +58,7 @@
 					<p>Estamos en más de 10 paises, y contamos con mucha experiencia.En Argentina, tenemos cinco sitios oficiales para luchar por nuestra causa.A lo largo de su historia, el proyecto estuvo involucrado en la creación y manejo efectivo de más de 20 áreas protegidas públicas, marinas y terrestres, municipales, provinciales y nacionales, contribuyendo así a la protección de más de 7,5 millones de hectáreas destinadas a la conservación y uso sustentable de la naturaleza.</p>
 				</div>
 			</div>
-			<div style="padding: 20px;">
-				<label for="name">Ingresa tú nombre..</label>
-				<input id="name" type="text" />
-				<button id="aceptar" class="btn btn-primary">Aceptar</button>
-				<p id="resultado"></p>
-			</div>
+		
 		</div>
 	</div>	
 
@@ -131,22 +121,7 @@
 	<!--Terceros-->	
 	<script src="js/jquery-1.12.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		
-		$( document ).ready(function() {
-			console.log("hola pagina");
-
-			$('#aceptar').on('click', function(){
-				$('#pregunta').html("De verdad querés conocer gilastro?");
-				//document.getElementById('pregunta').innerHTML = "De verdad querés conocer gilum?";
-				var nameUser = $('#name').val();
-				$('#resultado').html("Hola " + nameUser + " para saber mas de los animales, por favor contactacte a los telefonos abajo indicados, ya que no somos gile bolu.");
-			});
-
-
-		});
-
-	</script>
+	
 </body>
 </html>
 

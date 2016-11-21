@@ -27,17 +27,14 @@
 				    <li><a href="inicio_sa.html">Inicio</a></li>
 				    <li><a href="donde_estamos.html">Donde estamos</a></li>
 				    <li><a href="historia.html">Historia</a></li>
-				    <li class="active"><a href="#">Conoce Anix</a></li>
+				    <li><a href="conoce_anix.html">Conoce Anix</a></li>
 						<li class="dropdown">
-						  <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Desplegable<span class="caret"></span></a>
+						  <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Más
+						  <span class="caret"></span></a>
 						  <ul role="menu" class="dropdown-menu">
-					      <li><a href="#">Action</a></li>
-					      <li><a href="#">Another action</a></li>
-					      <li><a href="#">Something else here</a></li>
-					      <lsi class="divider"></li>
-					      <li class="dropdown-header">Nav header</li>
-					      <li><a href="#">Separated link</a></li>
-					      <li><a href="#">One more separated link</a></li>
+					      <li><a href="#">Contacto</a></li>
+					      <li><a href="#">Ayuda</a></li>
+					      <li><a href="#">RRHH</a></li>
 						 	</ul>
 						</li>
 					</ul>
@@ -53,7 +50,7 @@
       <div id="formulario"  style="text-align:center">
         <form action="form.php" method="POST" enctype="multipart/form-data">
           <div style="margin-bottom: 10px;">
-            <label>Nombre:</label>
+            <label id="name">Nombre:</label>
             <input type="text" name="nombre" style="margin-left:25px;" placeholder="Ingresa tu nombre"/>
           </div>		
           <div style="margin-bottom: 10px;">
@@ -76,16 +73,94 @@
           </div>
           <div id="botonesForm">
             <input type="reset" value="Borrar" class="btn btn-primary"/>
-            <input type="submit" value="Guardar" style="margin-left: 40px;" class="btn btn-primary"/>
+            <input type="submit" value="Enviar" style="margin-left: 40px;" class="btn btn-primary"/>
           </div>
         </form>
       </div>
 		</main>
 	</div>
 	<footer class= " row  section-page footer-contact"> 
-		<p>Developed WRT.2016</p>
+		<p>*Proyecto Anix es una asociación sin fines de lucro.</p>
 		<img src="img/footer_ima.jpg" style="height: 111px;"/>
 	</footer>
 	</div>
+
+	<!--Terceros-->	
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		
+		[javascript] $( document ).ready(function() {
+		$(‘#register’).submit(function(e) {
+		e.preventDefault();
+		}).validate({
+		debug: false,
+		rules: {
+		"name": {
+		required: true
+		},//cierra name
+		},//cierra rules
+
+		messages: {
+		"name": {
+		required: "Ey, te falta tu nombre!."
+		}//cierra name
+		},//messages
+		
+		});//cierra validate
+		});//js
+
+	</script>
 </body>
 </html>
+
+
+[javascript] $( document ).ready(function() {
+$(‘#register’).submit(function(e) {
+e.preventDefault();
+}).validate({
+debug: false,
+rules: {
+"name": {
+required: true
+},
+"surname": {
+required: true
+},
+"surname2": {
+required: true
+},
+"email": {
+required: true,
+email: true
+},
+"cpostal": {
+required: true,
+number:true,
+minlength: 5,
+maxlength: 5
+}
+},
+messages: {
+"name": {
+required: "Introduce tu nombre."
+},
+"surname": {
+required: "Apellido obligatorio."
+},
+"surname2": {
+required: "Apellido obligatorio."
+},
+"email": {
+required: "Introduce tu correo.",
+email: ""
+},
+"cpostal": {
+required: "Introduce tu código postal.",
+number: "Introduce un código postal válido.",
+maxlength: "Debe contener 5 dígitos.",
+minlength: "Debe contener 5 dígitos."
+}
+}
+});
+});
