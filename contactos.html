@@ -6,85 +6,83 @@
 	<title>Contactanos</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="estilos.css">
-	<style type="text/css">
-<body class ="container" style="width: 960px !important">
-<input:focus{
-	outline:none;
-	}
-	input:invalid{
-	background:green;
-	color:white;
-	}
-	input:checked{
-	outline: 1px solid green;
-	}
-	input: disabled{
-	background:yellow;
-	}
-	
-	textarea{
-	resize:none;
-	}
-	
-	::-webkit-input-placeholder{color:black;}
-	::-moz-placeholder{color:black;}
-	</style>
 </head>
-	<div id="contenedor">
+<body class ="container" style="width: 960px !important">
+	<div  id="contenedor" class="row section-page">
 		<header>
-			<nav>
-				<ul>
-					<li> <a href="inicio_sa.html" title="Inicio"><strong>Inicio</strong></a></li>
-					<li> <a href="donde_estamos.html" title="Donde estamos"><strong>Donde estamos</strong></a></li>
-					<li> <a href="historia.html" title="Historia"><strong>Historia</strong></a></li>
-					<li> <a href="conoce_anix.html" title="Conoce Anix"><strong>Conoce Anix</strong></a></li>
-				</ul>
-			</nav>
+			<!--Titulo-->
+			<div class="header-ani">
+				<div class="col-xs-2">
+					<p>LOGO</p>
+				</div>
+				<div class="col-xs-offset-5">
+					<h1 id="pageTitle">Proyecto Anix</h1>
+					<h5>Defendiendo la diversidad animal</h5>
+				</div>
+			</div>
+			<!--Menu-->
+		  <nav role="navigation" class="navbar navbar-default">
+				<div id="navbar-inverse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+				    <li><a href="inicio_sa.html">Inicio</a></li>
+				    <li><a href="donde_estamos.html">Donde estamos</a></li>
+				    <li><a href="historia.html">Historia</a></li>
+				    <li class="active"><a href="#">Conoce Anix</a></li>
+						<li class="dropdown">
+						  <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Desplegable<span class="caret"></span></a>
+						  <ul role="menu" class="dropdown-menu">
+					      <li><a href="#">Action</a></li>
+					      <li><a href="#">Another action</a></li>
+					      <li><a href="#">Something else here</a></li>
+					      <lsi class="divider"></li>
+					      <li class="dropdown-header">Nav header</li>
+					      <li><a href="#">Separated link</a></li>
+					      <li><a href="#">One more separated link</a></li>
+						 	</ul>
+						</li>
+					</ul>
+				</div>
+		  </nav>
 		</header>
 	</div>
- <div class= "contact-form">	
+ <div class= " row contact-form section-page">	
 		<main id="contacto">
-		<h1>Contactanos</h1>
-		<h2 style="padding-left: 350px;">¿Como contactarnos?</h2>		
-		<p><br>Por favor ingresá tus datos para formar parte de este proyecto, no pierdas la oportunidad de
-		participar!</p>
-		<div id="formulario">
-			<form action="form.php" method="POST" enctype="multipart/form-data">
-				<div style="margin-bottom: 10px;">
-						<label>Nombre:</label>
-						<input type="text" name="nombre" style="margin-left:25px;" placeholder="Ingresa tu nombre"/>
-				</div>		
-				<div style="margin-bottom: 10px;">
-						<label>Apellido:</label>
-						<input type="text" name="apellido" style="margin-left:20px;" placeholder="Ingresa tu apellido"/> 
-				</div>	
-				<div style="margin-bottom: 10px;">
-						<label>Telefono:</label>
-						<input type="number" name="telefono" style="margin-left:20px;" placeholder="Cod área + sin 15"/> 
-                </div>
-				<div>
-					<div style="margin-bottom: 10px;">
-					<label>Mail:</label>
-					<input type="email"  placeholder="unmail@tuMail.com.ar" name="mail" style="margin-left:45px;" required/> 
-					</div>
-				</div>
-				<div>
-				<label for="">Comentario:</label>
-					<textarea name="comentario" cols="30" rows="10" placeholder="Quiero compartir que..." autocomplete="off">
-						
-					</textarea>
-				</div>
-						
-		</div>
-				<div id="botonesForm">
-					<input type="reset" value="Borrar"/>
-					<input type="submit" value="Guardar" style="margin-left: 40px;"/>
-				</div>
-			</form>
-		</div>
+      <h1>Contactanos</h1>
+      <h2 style="padding-left: 350px;">¿Como contactarnos?</h2>		
+      <p>Por favor ingresá tus datos para formar parte de este proyecto, no pierdas la oportunidad de participar!</p>
+      <div id="formulario"  style="text-align:center">
+        <form action="form.php" method="POST" enctype="multipart/form-data">
+          <div style="margin-bottom: 10px;">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" style="margin-left:25px;" placeholder="Ingresa tu nombre"/>
+          </div>		
+          <div style="margin-bottom: 10px;">
+            <label>Apellido:</label>
+            <input type="text" name="apellido" style="margin-left:20px;" placeholder="Ingresa tu apellido"/> 
+          </div>	
+          <div style="margin-bottom: 10px;">
+            <label>Telefono:</label>
+            <input type="number" name="telefono" style="margin-left:20px;" placeholder="Cod área + sin 15"/> 
+          </div>
+          <div>
+            <div style="margin-bottom: 10px;">
+            <label>Mail:</label>
+            <input type="email"  placeholder="unmail@tuMail.com.ar" name="mail" style="margin-left:45px;" required/> 
+            </div>
+          </div>
+          <div>
+            <label for="">Comentario:</label>
+            <textarea name="comentario" cols="30" rows="10" placeholder="Quiero compartir que..." autocomplete="off"></textarea>
+          </div>
+          <div id="botonesForm">
+            <input type="reset" value="Borrar" class="btn btn-primary"/>
+            <input type="submit" value="Guardar" style="margin-left: 40px;" class="btn btn-primary"/>
+          </div>
+        </form>
+      </div>
 		</main>
 	</div>
-	<footer class= "footer-contact"> 
+	<footer class= " row  section-page footer-contact"> 
 		<p>Developed WRT.2016</p>
 		<img src="img/footer_ima.jpg" style="height: 111px;"/>
 	</footer>

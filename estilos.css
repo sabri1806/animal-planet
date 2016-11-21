@@ -113,6 +113,26 @@ footer{
     width: 800px;
     text-align: center;
 }
-.contact-form{
 
+
+/*Estilos contacto*/
+input:focus{
+	outline:none;
 }
+input:invalid{
+  background:green;
+  color:white;
+}
+input:checked{
+  outline: 1px solid green;
+}
+input:disabled{
+  background:yellow;
+}
+
+textarea{
+  resize:none;
+}
+
+::-webkit-input-placeholder{color:black;}
+::-moz-placeholder{color:black;}
