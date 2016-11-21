@@ -13,7 +13,7 @@
 			<!--Titulo-->
 			<div class="header-ani">
 				<div class="col-xs-2">
-					<p>LOGO</p>
+					<img src="img/Anix_logo.png" style="height: 72px;">
 				</div>
 				<div class="col-xs-offset-5">
 					<h1 id="pageTitle">Proyecto Anix</h1>
@@ -45,7 +45,7 @@
  <div class= " row contact-form section-page">	
 		<main id="contacto">
       <h1>Contactanos</h1>
-      <h2 style="padding-left: 350px;">¿Como contactarnos?</h2>		
+      <h2 style="padding-left: 350px;"><trong>Datos:<strong></h2>		
       <p>Por favor ingresá tus datos para formar parte de este proyecto, no pierdas la oportunidad de participar!</p>
       <div id="formulario"  style="text-align:center">
         <form action="form.php" method="POST" enctype="multipart/form-data">
@@ -72,11 +72,15 @@
             <textarea name="comentario" cols="30" rows="10" placeholder="Quiero compartir que..." autocomplete="off"></textarea>
           </div>
           <div id="botonesForm">
-            <input type="reset" value="Borrar" class="btn btn-primary"/>
-            <input id="sendBtn" type="button" value="Enviar" style="margin-left: 40px;" class="btn btn-primary"/>
+            <input type="reset" value="Borrar" class="btn btn-primary" style="margin-left: 50px;
+            background-color: #4bd651;
+            border-color: #2e6da4;"/>
+            <input id="sendBtn" type="button" value="Enviar" style="margin-left: 50px;background-color: #4bd651;
+            border-color: #2e6da4;" class="btn btn-primary"/>
           </div>
         </form>
       </div>
+      <div class= "tit-form">
       <div id="formSent" style="display: none; border: 1px solid">
         <h1 style="color:green">FORMULARIO ENVIADO</h1>
       </div>

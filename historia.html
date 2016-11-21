@@ -1,12 +1,23 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-    <!--ADAPTACIÓN A CELULARES-->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta charset="UTF-8">
 	<title>Proyecto Anix</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="estilos.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		$("input").focus(function(){
+		    $(this).css("background-color", "#cccccc");
+		});
+		$("input").blur(function(){
+		    $(this).css("background-color", "#ffffff");
+		});
+		});
+	</script>
+
 </head>
 <body class ="container" style="width: 960px !important">
 	<div class="row section-page">
@@ -14,7 +25,7 @@
 			<!--Titulo-->
 			<div class="header-ani">
 				<div class="col-xs-2">
-					<p>LOGO</p>
+					<img src="img/Anix_logo.png" style="height: 72px;">
 				</div>
 				<div class="col-xs-offset-5">
 					<h1 id="pageTitle">Proyecto Anix</h1>
@@ -76,22 +87,15 @@
 				</div>
 
 			</div>
-			<div style="padding: 20px;">
-				<label for="name">Ingresa tú nombre..</label>
-				<input id="name" type="text" />
-				<button id="aceptar" class="btn btn-primary">Aceptar</button>
-				<p id="resultado"></p>
-			</div>
 		</div>
 	</div>	
 				
 
 <!-- Significado animal en extincion -->
 	<div class="row section-page"> 
-		<article class="col-xs-4 article-ani">
-			<p>Para pensar...</p>
-			<img src="img/frase.png" alt="animal1" style="height: 147px;"/>
-		</article>
+		<div class="col-xs-4 article-ani" style="margin-top: 130px;">
+        Name: <input type="text" name="fullname">
+		</div>
 		<article class="col-xs-7 col-xs-12 col-xs-10 article-ani">
 			<h2>Historia</h2>
 			<p> La caza ilegal y la pérdida de hábitat actualmente amenaza a las cinco especies sobrevivientes de rinoceronte, pero ninguna está tan críticamente en peligro como el rinoceronte de Java. Una vez encontrado en una franja en Asia sudeste, desde India hacia Indonesia, dos de sus tres subespecies están extintas, incluyendo una variedad vietnamita cuyo último miembro fue asesinado por un cazador ilegal en el 2010. Eso deja alrededor de 40 individuos en el Parque Nacional Ujung Kulon, en la isla de Java. Dado que ningún rinoceronte de Java existe en cautiverio, el destino de esta especie se encuentra en estos últimos ejemplares.</p>
@@ -144,7 +148,7 @@
 				$('#pregunta').html("De verdad querés conocer gilastro?");
 				//document.getElementById('pregunta').innerHTML = "De verdad querés conocer gilum?";
 				var nameUser = $('#name').val();
-				$('#resultado').html("Hola " + nameUser + " para saber mas de los animales, por favor contactacte a los telefonos abajo indicados, ya que no somos gile bolu.");
+				$('#resultado').html("Hola " + nameUser + " para saber mas de los animales, por favor contactacte a los telefonos abajo indicados.");
 			});
 
 
