@@ -120,7 +120,7 @@ input:focus{
 	outline:none;
 }
 input:invalid{
-  background:green;
+  border: 1px solid red;
   color:white;
 }
 input:checked{

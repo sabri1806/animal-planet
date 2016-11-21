@@ -51,7 +51,7 @@
         <form action="form.php" method="POST" enctype="multipart/form-data">
           <div style="margin-bottom: 10px;">
             <label id="name">Nombre:</label>
-            <input type="text" name="nombre" style="margin-left:25px;" placeholder="Ingresa tu nombre"/>
+            <input id="nameTxt" type="text" name="nombre" style="margin-left:25px;" placeholder="Ingresa tu nombre" required/>
           </div>		
           <div style="margin-bottom: 10px;">
             <label>Apellido:</label>
@@ -64,7 +64,7 @@
           <div>
             <div style="margin-bottom: 10px;">
             <label>Mail:</label>
-            <input type="email"  placeholder="unmail@tuMail.com.ar" name="mail" style="margin-left:45px;" required/> 
+            <input type="email"  placeholder="unmail@tuMail.com.ar" name="mail" style="margin-left:45px;" /> 
             </div>
           </div>
           <div>
@@ -73,9 +73,12 @@
           </div>
           <div id="botonesForm">
             <input type="reset" value="Borrar" class="btn btn-primary"/>
-            <input type="submit" value="Enviar" style="margin-left: 40px;" class="btn btn-primary"/>
+            <input id="sendBtn" type="button" value="Enviar" style="margin-left: 40px;" class="btn btn-primary"/>
           </div>
         </form>
+      </div>
+      <div id="formSent" style="display: none; border: 1px solid">
+        <h1 style="color:green">FORMULARIO ENVIADO</h1>
       </div>
 		</main>
 	</div>
@@ -90,77 +93,23 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		
-		[javascript] $( document ).ready(function() {
-		$(‘#register’).submit(function(e) {
-		e.preventDefault();
-		}).validate({
-		debug: false,
-		rules: {
-		"name": {
-		required: true
-		},//cierra name
-		},//cierra rules
+    		$( document ).ready(function() {
 
-		messages: {
-		"name": {
-		required: "Ey, te falta tu nombre!."
-		}//cierra name
-		},//messages
-		
-		});//cierra validate
-		});//js
+          $('#sendBtn').on('click', function() {
+
+            if($('#nameTxt').val() == ''){
+              alert("Por favor ingrese su nombre.");
+              return;
+            }
+
+
+            $('#formulario').css('display','none');
+
+            $('#formSent').css('display','block');
+          });
+
+        })
 
 	</script>
 </body>
 </html>
-
-
-[javascript] $( document ).ready(function() {
-$(‘#register’).submit(function(e) {
-e.preventDefault();
-}).validate({
-debug: false,
-rules: {
-"name": {
-required: true
-},
-"surname": {
-required: true
-},
-"surname2": {
-required: true
-},
-"email": {
-required: true,
-email: true
-},
-"cpostal": {
-required: true,
-number:true,
-minlength: 5,
-maxlength: 5
-}
-},
-messages: {
-"name": {
-required: "Introduce tu nombre."
-},
-"surname": {
-required: "Apellido obligatorio."
-},
-"surname2": {
-required: "Apellido obligatorio."
-},
-"email": {
-required: "Introduce tu correo.",
-email: ""
-},
-"cpostal": {
-required: "Introduce tu código postal.",
-number: "Introduce un código postal válido.",
-maxlength: "Debe contener 5 dígitos.",
-minlength: "Debe contener 5 dígitos."
-}
-}
-});
-});
