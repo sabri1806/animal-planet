@@ -1,5 +1,4 @@
-
-body {
+body{
 	font-family: "Times New Roman", Georgia, Serif;
 	font-size: 1.7rem;
 }
@@ -75,7 +74,45 @@ footer{
 
 .lista-contacto{
 	list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 180px;
+	margin: 0;
+	padding: 0;
+	width: 180px;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.descripcion-articulo{
+	margin: 0;
+    font-family: BodyFont,sans-serif;
+    max-height: 56px;
+    overflow: hidden;
+    line-height: 1.3em;
+    font-size: 0.9em;
+}
+.no-image-links{
+    outline: none;
+    text-decoration: none;
+}
+.news-ani{
+	border: 1px solid;
+}
+.footer-iconos-links{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.footer-nav-brand{
+	margin-top: 18px;
+}
+.footer-contact{
+	height: 177px;
+    width: 800px;
+    text-align: center;
+}
+.contact-form{
+
 }
