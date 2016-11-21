@@ -97,18 +97,26 @@
 
           $('#sendBtn').on('click', function() {
 
-            if($('#nameTxt').val() == ''){
-              alert("Por favor ingrese su nombre.");
-              return;
+            if(!validateInputs()){
+              return ;
             }
-
 
             $('#formulario').css('display','none');
 
             $('#formSent').css('display','block');
           });
 
-        })
+        });
+
+        function validateInputs(){
+
+            if($('#nameTxt').val() == ''){
+              alert("Por favor ingrese su nombre.");
+              return false;
+            }
+
+            return true;
+        }
 
 	</script>
 </body>
