@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Contactanos</title>
+	<link rel="stylesheet" href="estilos.css" />
+	<style type="text/css">
+	input:focus{
+	outline:none;
+	}
+	input:invalid{
+	background:green;
+	color:white;
+	}
+	input:checked{
+	outline: 1px solid green;
+	}
+	input: disabled{
+	background:yellow;
+	}
+	
+	textarea{
+	resize:none;
+	}
+	
+	::-webkit-input-placeholder{color:orange;}
+	::-moz-placeholder{color:orange;}
+	</style>
+</head>
+<body>
+	<div id="contenedor">
+		<header>
+			<nav>
+				<ul>
+					<li> <a href="inicio_sa.html" title="Inicio"><strong>Inicio</strong></a></li>
+					<li> <a href="donde_estamos.html" title="Donde estamos"><strong>Donde estamos</strong></a></li>
+					<li> <a href="historia.html" title="Historia"><strong>Historia</strong></a></li>
+					<li> <a href="conoce_anix.html" title="Conoce Anix"><strong>Conoce Anix</strong></a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main id="contacto">
+		
+		<h1>Contactanos</h1>
+		
+		<h2 style="padding-left: 350px;">¿Como contactarnos?</h2>
+		
+		<p><br>Por favor ingresá tus datos para formar parte de este proyecto, no pierdas la oportunidad de
+		participar!</p>
+		
+			<div id="formulario">
+				<form action="form.php" method="POST" enctype="multipart/form-data">
+					<div style="margin-bottom: 10px;">
+							<label>Nombre Completo:</label>
+							<input type="text" name="nombre" style="margin-left:25px;" placeholder="NOMBRE"/>
+					</div>		
+					<div style="margin-bottom: 10px;">
+							<label>Apellido:</label>
+							<input type="text" name="apellido" style="margin-left:20px;" placeholder="APELLIDO"/> 
+					</div>	
+					<div style="margin-bottom: 10px;">
+							<label>Telefono:</label>
+							<input type="number" name="telefono" style="margin-left:20px;" placeholder="Cod área + sin 15"/> 
+					</div>
+							<div style="margin-bottom: 10px;">
+							<label>Mail:</label>
+							<input type="email"  placeholder="unmail@tumail.com.ar" name="mail" style="margin-left:45px;" required/> 
+					</div style="margin-bottom: 10px;">
+							<label for="">Comentario:</label>
+							<textarea name="comentario" cols="30" rows="10" placeholder="Quiero compartir que..." autocomplete="off"></textarea>
+					</div>
+					
+					<div id="botonesForm">
+						<input type="reset" value="Borrar"/>
+						<input type="submit" value="Guardar" style="margin-left: 40px;"/>
+					</div>
+				<form>
+			</div>
+		</main>
+
+	<footer> 
+
+		<h4><a href="#" title="Frulaaaa">Te gustaria ser parte de Anix?</a></h4>
+		<nav id="navegadores">
+		<ul>
+			<li><a href="guardado.html">proyectoanix@elmail.com</a></li>
+			<li><a href="#">Contactos</a></li>
+		</ul>
+				<nav id="redes">
+				<ul>
+					<li><a href="#" id="fb"></a></li>
+					<li><a href="#" id="tw"></a></li>
+					<li><a href="#" id="gl"></a></li>
+					<li><a href="#" id="yt"></a></li>
+				</ul>
+			</nav>	
+			
+	</footer>
+		
+	</div>
+</body>
+</html>

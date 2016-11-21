@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<!--Importante para ADAPTACIÓN A CELULARES-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta charset="UTF-8">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+<!--	BOOTSTRAP
+
+Se basa en una grilla de 12 columnas en las que se divide cada "fila" o bloque de contenido. Siempre tienen que sumar 12, colo de contenido o entre contenido y espacios en blanco que queramos dejar como separación entre columnas.
+
+Puede adaptar su contenido a distintos tamaños de pantallas y dispositivos, para lo cual, bootstrap trabaja con medidas preseteadas donde se produce el cambio y dentro de las cuales, podemos volver a replantear la maquetación de las columnas de cada bloque de contendio. Esos tamaños o cortes son:
+
+xs (<768px) / sm (>=768px) / md (>=992px) / lg (>=1200px)
+
+Lo primero que debemos establecer es nuestro contenedor, el cual se verá de un determinado tamaño, de acuerdo al tamaño general del medio (xs, sm, md o lg) y centrado con respecto al tamaño total de ancho de la ventana, cuando sea más angosto. Para eso tenemos dos clases:
+
+CONTAINER: contenedor centrado (ej a 1170px en pantalla de 1200px)
+CONTAINER-FLUID: abarca el 100% de la ventana (menos un padding que siempre deja)
+
+Dentro de esos contenedores podemos aplicarle a un elemento la clase ROW que determina que se trata de una nueva fila o bloque de contenido, el cual será dividido en las 12 columnas o bloques de ancho. 
+
+El framework ES MOBILE FIRST, por lo tanto si maquetamos las columanas para la pantalla md, por ejemplo, y no lo hacemos para lg, éstos dispositivos trabajarán con la misma maquetación que el md (el concepto sería md para "arriba"), NUNCA va a tomar la maquetación de sm estando md seteado.--> 
+
+	<header>
+	<!--Podemos darle la clase container directamente al header o, como en este caso, dejamos que tome el 100% y el container lo ponemos dentro para que su contenido se muestre centrado-->
+		<div class="container">
+			<h1>Bienvenidos a Bootstrap</h1>
+		</div>
+	</header>
+	
+	<!--Establecemos un nuevo contenedor para que se muestre apilado con el anterior y del mismo ancho-->
+	<main class="container">
+		<!--Primer bloque del contenedor es la section con row-->
+		<section class="row ">
+			<!--Ahora internamente, le vamos a decir a cada elemento (article y aside) cuantos bloques deben ocupar en cada pantalla para que se muestren a dos columnas (en medios más grandes) o apilados (en celular)
+			Al article le decimos que ocupe las 12 en xs, 6 en sm (las otras 6 son para el aside) 8 en md (las otras 4 el aside) y 9 en lg (las otras 3 para el aside)-->
+			<article class="col-xs-12 col-sm-6  col-md-8 col-lg-9 ">
+				<h2>Título del artículo</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+			</article>
+			<!--Ahora ajustamos los bloques que reservamos para el aside en cada medio dentro del primer bloque de contenido (la section con row)-->
+			<aside class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
+				<p>Publicidad</p>
+			</aside>
+		</section>
+		<!--Segundo bloque de contenido, nueva section dentro del mismo container (el main), por lo tanto le ajustamos la clase row-->
+		<section class="row">
+			<!--y dividimos este bloque en cuatro columnas (4 articles) a los que le vamos a ajustar un tamaño proporcional con la misma cantidad de bloques o columnas a cada uno en cada medio)-->
+			<article class="col-xs-12 col-sm-6 col-md-3 verde">
+				<p>Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo.</p>
+			</article>
+			
+			<article class="col-xs-12 col-sm-6 col-md-3 rosa">
+				<p>Contenido del artículo</p>
+			</article>  
+			<!--Cuando una de las columnas tiene un mayor alto por la cantidad de contenido (en este caso el primero) se puede romper la maquetación en alguno de los medios y las columnas ubicarse con una posición que no es la esperada. En este caso sucede en el tamaño sm (probar de quitar el siguiente div y ajustar la ventana a ese tamaño para verificarlo). Para solucionar este problema y que las columnas se ubiquen dos arriba y dos abajo como esperamos, agregamos un div vacío (no ocupa lugar visible pero existe y puede recibir css) al cual le ajustamos la clase clearfix (propiedad clear css) y también la clase visible SOLO para el medio que rompe, como en este caso eso sucede en sm, la clase es visible-sm (hay una para cada medio) y le podemos agregar como queremos que sea visible en ese medio: en bloque, en línea o inline-block. Al actuar solo en este medio, en los demás no afecta para nada.-->
+			<div class="clearfix visible-sm-block"></div>
+			
+			<article class="col-xs-12 col-sm-6 col-md-3 celeste">
+				<p>Contenido del artículo</p>
+			</article>
+			
+			<article class="col-xs-12 col-sm-6 col-md-3 marron">
+				<p>Contenido del artículo</p>
+			</article>
+		</section>
+		
+		<!--En este nuevo bloque, vamos a agregar menos articles para que sobre espacio y distribuirlo de la manera que queramos mediante la clase offset que "empuja" la cantidad de columnas que diga el número y en el medio declarado.-->
+		<section class="row">
+			<!--a este article lo empujamos una columna-->
+			<article class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1 verde">
+				<p>Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. Contenido del artículo. </p>
+			</article>
+			
+			<article class="col-xs-12 col-sm-6 col-md-3 rosa">
+				<p>Contenido del artículo</p>
+			</article>  
+			
+			<!--seguimos corrigiendo la maquetación en sm-->
+			<div class="clearfix visible-sm-block"></div>
+			
+			<!--a este article lo empujamos dos columnas-->
+			<article class="col-xs-12 col-sm-6 col-md-3 col-md-offset-2 celeste">
+				<p >Contenido del artículo</p>
+			</article>
+		</section>
+	</main><!--Termina el container-->
+	
+	<!--Al footer también lo tratamos como container para apilarlo al resto de la maquetación.-->
+	<footer class="container">
+		<p class="text-center">Pie de página</p>
+	</footer>
+	
+	<!--Linkeamos los js, primero siempre jquery y luego bootstrap-->
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

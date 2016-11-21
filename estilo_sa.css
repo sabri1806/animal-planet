@@ -1,0 +1,368 @@
+*{margin:0; padding:0;}
+
+body{
+	background-color:#e0f186; 
+}
+
+main{
+	border:px solid green;
+}
+#contenedor{
+	width:960px;
+	height:auto;
+	background-color:#08a056;
+	margin:auto;
+	position:relative;
+}
+
+header, main, footer{
+	padding:20px;
+	box-sizing: border-box;
+}
+
+#inicio{
+	background-color:black; 
+	text-align:center;
+	margin:auto;
+	width:960px;
+	background-image:url(img/fondo1.jpg);
+	background-repeat:no-repeat;
+	background-size:960px 960px;
+	position:relative;
+	top:100px;
+	color:#000000;
+	height:800px;
+}
+
+#dondeEstamos{
+	text-align:center;
+	margin:auto;
+	width:960px;
+	background-image:url(img/mapa.jpg);
+	background-repeat:no-repeat;
+	background-size:960px 960px;
+	position:relative;
+	top:100px;
+	color:#312f2f; 
+	height:800px;
+}
+#comoNaceAnix{
+	text-align:center;
+	width:960px;
+
+    background-image:url(img/edificioAnix.jpg);
+	margin:auto;
+	position: relative;
+	top:100px;
+	height:600px;
+	background-repeat:no-repeat;
+	background-size:960px 960px;
+		
+}
+#rrhh{
+	text-align:center;
+	width:960px;
+	margin:auto;
+	position:relative;
+	top:100px;
+	height:650px;
+	background-image:url(imagenes/fondoVideo.jpg);
+	background-repeat:no-repeat;
+	/* font-size:1.2em; */
+	font-style:italic;
+}
+
+#video{
+	position:relative;
+	top:80px;
+	
+}
+#formulario{
+	margin:auto;
+	width:960px;
+	background-repeat: no-repeat;
+	position:relative;
+	top:100px;
+	color:#000000;
+	background-size:100%;
+	height:600px;
+}
+#contactos{
+	position:relative;
+	top:100px;
+}
+
+#botonesForm{
+	position:relative;
+	display:inline-block;
+	text-align:center;	
+}
+#conoceAnix{
+	text-align:center;
+	margin:auto;
+	width:960px;
+	/* background-image:url(imagenes/fondo_cafe.jpeg); */
+	background-color:#000000;
+	position:relative;
+	top:100px;
+	color:#FFFFFF;
+	background-size:960px;
+	height:auto;
+}
+	
+	 p{
+		margin:auto;
+		text-align:center;
+		position:relative;
+		top:50px;
+		font-size:1,5em;
+	}
+	 h2{
+		position:relative;
+		top:50px;
+	}
+header{
+	position:fixed;
+	z-index:100;
+	text-align:center;
+	margin:auto;
+	width:960px;
+	background-color:#F3F3F3;
+	padding:0px;
+	/*
+	background-image:url(imagenes/logo.png);
+	background-repeat: no-repeat;
+	background-position:left-center;
+	background-size:120px;*/
+}
+
+
+header nav ul li a{
+	list-style: none;
+	text-decoration:none;
+}
+
+header nav ul li{
+	z-index:80;
+	list-style: none;
+	width:200px;
+	background-color: white;
+	margin:20px auto 20px 20px;
+	display: inline-block;
+}
+
+header nav ul li a{
+	text-decoration:none;
+	height:40px;
+	line-height:40px;
+	color:blue;
+	display:block;
+	text-align:center;
+}
+
+header nav ul li a:hover{
+	background-color:#59D234;
+	
+}
+#logo_inicio{
+	position:relative;
+	top:25px;
+	left:390px;
+	width:120px;
+	height:120px;
+	background-size:120px;
+	background-position:center;
+	margin:0;
+	padding:0;
+	z-index:5;
+	/* background-image:url(imagenes/logo.png); */
+}
+
+#edificioAnix{
+	position:relative;
+	top:25px;
+	background-size:120px;
+	background-position:center;
+	margin:0;
+	padding:0;
+	z-index:5;
+	background-repeat:no-repeat;
+}
+
+#animal1{
+ 	position:relative;
+	top:-50px;
+	left:-345px;
+	
+	margin:0;
+	padding:0;
+	width:1060px;
+	height:500px;
+	
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:320px;
+	margin-right:320px;
+}
+
+#publicidad{
+	background-image:url(imagenes/frappula_frappuccino.jpg);
+	position:fixed;
+	right:400px;
+	width:400px;
+	height:250px;
+	background-size:100%;
+	background-position:center;
+	background-repeat:no-repeat;
+	margin:0;
+	padding:0;
+	z-index:5;
+	border:2px solid black;
+}
+
+#publicidad a{
+	position:relative;
+	left:170px;
+	top:220px;
+	
+}
+
+#boton{
+	visibility:hidden;
+	display:none;
+}
+.animal1{
+	position:relative;
+	top:150px;
+	left:-200px;
+	font-style:italic;
+	font-size:2em;
+	z-index:10;
+}
+.animal1Txt{
+	position:relative;
+	top:-200px;
+	left:-20px;
+	font-size:1em;
+	z-index:5;
+	width:500px;
+}
+
+.animales_texto{
+	position:relative;
+	top:120px;
+	font-size:medium;
+	font-family:"Times New Roman", Georgia, Serif;
+	z-index:2;
+	
+}
+
+}
+#img{
+	border:2px solid black;
+	height:auto;
+	padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+#imagen1, #imagen2, #imagen3,#imagen4, #imagen5, #imagen6, #imagen7, #imagen8{
+	display:inline-block;
+}
+
+#imagen1:hover, #imagen2:hover, #imagen3:hover,#imagen4:hover, #imagen5:hover, #imagen6:hover, #imagen7:hover, #imagen8:hover{
+	 opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+/*#redes{
+	position:fixed; 
+}
+#redes ul li{
+		list-style-type: none;
+
+}
+#redes ul li a{
+	width:48px;
+	height:48px;
+	background:url(imagenes/redes.png);
+	display:inline-block;
+	text-decoration:none;
+	position:relative;
+	left:950px;
+	bottom:900px;
+*/
+}
+#redes #fb{ background-position:left top; }
+#redes #tw{ background-position:-52px top; }
+#redes #gl{ background-position:-104px top; }
+#redes #yt{ background-position:-156px top; }
+
+#redes #fb:hover{ background-position:left bottom; }
+#redes #tw:hover{ background-position:-52px bottom; }
+#redes #gl:hover{ background-position:-104px bottom; }
+#redes #yt:hover{ background-position:-156px bottom; }
+
+#navegadores ul{
+     padding-top:20px;
+	list-style-type:none;
+}
+#navegadores ul li{
+	padding-top:30px;
+	padding-left:30px;
+
+}
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.social ul {
+		list-style: none;
+	}
+ 
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+ 
+	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-googleplus {background: #d95232;}
+	.social ul li .icon-pinterest {background: #ae181f;}
+	.social ul li .icon-mail {background: #666666;}
+ 
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+footer {
+	bottom:0;
+	background-color:#F3F3F3;
+	/*display:block;
+	box-sizing:border-box;
+	position:absolute;*/
+	background-image:url(imagenes/imagenFooter.png);
+	background-repeat: no-repeat;
+	background-position:right bottom;
+	background-size:20px;
+	width:960px;
+	height:200px;
+	margin:auto;
+	position:relative;
+	top:100px;
+	border-top: 3px;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	
+	}

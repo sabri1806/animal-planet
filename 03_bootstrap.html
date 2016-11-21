@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<!--Importante para ADAPTACIÓN A CELULARES-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta charset="UTF-8">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Bienvenidos a Bootstrap <span class="small">Clase SMALL</span></h1>
+		</div>
+	</header>
+	
+	<main class="container">
+		<section class="row">
+			<!--A los controles (input, textarea, etc) le damos la clase form-control y al div que los encierra junto a un label la clase form-control-->
+			<h2 class="col-md-8 col-md-offset-2">Formularios</h2>
+			
+			<form action="#" class="form-horizontal col-md-8 col-md-offset-2">
+				<div class="form-group"><!--div que encierra grupo de controles-->
+					<!--con control-label habilita porder manejarla como col-->
+					<label class="control-label col-md-2">Nombre</label>
+					<!--div para manejar como col el input. La clase input-lg lo agranda y sm lo compacta-->
+					<div class="col-md-10">
+						<input class="form-control input-lg" type="text"placeholder="tu nombre..." />
+					</div>
+				</div>
+				<!--las clases has-success warning y error sirven para aplicarlas junto a la validación del campo para marcar si el ingreso es válido o no-->
+				<div class="form-group has-success">
+					<label class="control-label col-md-2">Mail</label>
+					<div class="col-md-10">
+						<input class="form-control input-lg" type="email"placeholder="tu email..." />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="control-label col-md-2" for="archivo">
+									Archivo</label>
+					<div class="col-md-10">
+						<input class="form-control" type="file"/>
+						<!--texto aclaratorio o de información-->
+						<p class="help-block">Hasta 2M</p>
+					</div>
+				</div>
+			
+				<div class="form-group">
+					<label class="control-label col-md-2">Comentario</label>
+					<div class="col-md-10">
+						<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label col-md-2">Lista</label>
+					<div class="col-md-10">
+						<select class="form-control" name="" id="">
+							<option value="xx">item</option>
+							<option value="xx">item</option>
+							<option value="xx">item</option>
+							<option value="xx">item</option>
+							<option value="xx">item</option>
+							<option value="xx">item</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<!--Para los checkbox y radio hay una clase con ese nombre para el div que los contiene-->
+					<div class="checkbox col-md-10 col-md-offset-2">
+						<label>
+							<input type="checkbox" value="xxx"/>item
+						</label>
+					</div>
+					<div class="checkbox col-md-10 col-md-offset-2">
+						<label>
+							<input type="checkbox" value="xxx"/>item
+						</label>
+					</div>
+					<div class="checkbox col-md-10 col-md-offset-2">
+						<label>
+							<input type="checkbox" value="xxx"/>item
+						</label>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="radio col-md-10 col-md-offset-2">
+						<label>
+							<input type="radio" value="xxx"/>item
+						</label>
+					</div>
+					<div class="radio col-md-10 col-md-offset-2">
+						<label>
+							<input type="radio" value="xxx"/>item
+						</label>
+					</div>
+					<div class="radio col-md-10 col-md-offset-2">
+						<label>
+							<input type="radio" value="xxx"/>item
+						</label>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class=" col-md-10 col-md-offset-2">
+						<input type="reset" value="limpiar form" class="btn btn-danger" />
+						<input type="submit" value="enviar form" class="btn btn-success" />
+					</div>
+				</div>
+			</form>
+		</section>
+		<section class="row">
+			<h2 class="col-md-8 col-md-offset-2">En línea</h2>
+			<form action="#" class="form-inline col-md-8 col-md-offset-2" >
+			
+				<div class="form-group">
+					<div class="input-group">
+					<!--addon pone el div junto al input cuando los encierra un div con la clase input-group-->
+						<div class="input-group-addon">User</div>
+						<input class="form-control" type="text" placeholder="user..." />
+					</div>
+				</div>
+			
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon">pass</div>
+						<input class="form-control" type="password" placeholder="clave..." />
+					</div>
+				</div>
+			
+				<div class="form-group">	
+					<input type="submit" value="entrar" class="btn btn-primary" />
+				</div>
+			</form>
+		</section>
+		
+		<section class="row">
+			<h2 class="col-md-10 col-md-offset-2">Apilado</h2>
+			<form action="#" class="col-md-8 col-md-offset-2" >
+				<div class="form-group">
+					<label for="nombre">Nombre</label>
+					<input class="form-control input-sm" type="text" placeholder="nombre..." />
+				</div>	
+				<div class="form-group">
+					<label for="lista">Lista</label>
+					<select class="form-control" name="lista">
+						<option value="algo">item</option>
+						<option value="algo">item</option>
+						<option value="algo">item</option>
+						<option value="algo">item</option>
+					</select>
+				</div>
+				<div class="form-group">	
+					<label for="mensaje">Comentario</label>
+					<textarea class="form-control" name="mensaje" cols="30" rows="10"></textarea>
+				</div>
+				<div class="form-group">	
+					<label for="archivo">Archivo</label>
+					<input class="form-control" type="file">
+					<p class="help-block">Tamaño máximo permitido</p>
+				</div>
+				<div class="form-group">	
+					<input type="submit" value="enviar" class="btn btn-success" />
+				
+				</div>
+			</form>
+		</section>
+	</main>
+	
+	<footer class="container">
+		<p class="text-center">Pie de página</p>
+	</footer>
+	
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

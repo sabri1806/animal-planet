@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <!--ADAPTACIÓN A CELULARES-->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta charset="UTF-8">
+	<title>Proyecto Anix</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body class ="container" style="width: 960px !important">
+	<div class="row section-page">
+		<header>
+			<!--Titulo-->
+			<div class="header-ani">
+				<div class="col-xs-2">
+					<p>LOGO</p>
+				</div>
+				<div class="col-xs-offset-5">
+					<h1 id="pageTitle">Proyecto Anix</h1>
+					<h5>Defendiendo la diversidad animal</h5>
+				</div>
+			</div>
+			<!--Menu-->
+		  <nav role="navigation" class="navbar navbar-default">
+				<div id="navbar-inverse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+				    <li class="active"><a href="#">Inicio</a></li>
+				    <li><a href="#donde_estamos">Donde estamos</a></li>
+				    <li><a href="#historia">Historia</a></li>
+				    <li><a href="#conoce_anix">Conoce Anix</a></li>
+						<li class="dropdown">
+						  <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Desplegable<span class="caret"></span></a>
+						  <ul role="menu" class="dropdown-menu">
+					      <li><a href="#">Action</a></li>
+					      <li><a href="#">Another action</a></li>
+					      <li><a href="#">Something else here</a></li>
+					      <li class="divider"></li>
+					      <li class="dropdown-header">Nav header</li>
+					      <li><a href="#">Separated link</a></li>
+					      <li><a href="#">One more separated link</a></li>
+						 	</ul>
+						</li>
+					</ul>
+				</div>
+		  </nav>
+		</header>
+	</div>
+
+	<!-- Significado animal en extincion -->
+	<div class="row section-page"> 
+		<article class="col-xs-7 col-xs-12 col-xs-10 article-ani">
+			<h2>¿Qué significa un animal en peligro de extinción?</h2>
+			<p> El peligro es el riesgo de que ocurra algo malo. Se trata de una situación latente, con potencial dañino para el cuerpo, el ambiente o la propiedad. El peligro puede estar dado por una amenaza física o por una circunstancia abstracta.</p>
+			<div class="col-xs-offset-5">
+				<button class="btn btn-primary">Conocer más</button>
+			</div>
+		</article>
+		<article class="col-xs-4 article-ani">
+			<p>Publicidad</p>
+			<img src="img/publicidad.png" alt="animal1" style="height: 147px;" />
+		</article>
+	</div>
+
+	<!-- Dos animales en peligro de extincion -->
+	<div class="row section-page">
+		<div class="col-xs-6">
+			<img class="seccion-media" src="./img/animal1.jpg" style="width: 385px" />
+		  <h2>Tigre Blanco</h2>
+		  <p>El tigre blanco es cazado mayoritariamente por cazadores furtivos en muchos paises asiaticos es un buen nadador pero un escalador muy pobre son animales solitarios y cazan por la noche</p>
+		</div>	
+		<div class="col-xs-6">
+			<img src="./img/animal2.jpg"/>
+		  <h2>Koala</h2>
+		  Una importante disminución de los koalas se debe a la tala indiscriminada y también a los accidentes de tránsito. Según un informe el 75% de los accidentes con autos que involucran animales son koalas.  
+		</div>	
+	</div>  
+
+	<!-- Infografía -->
+	<div class="row section-page">
+		<div class="col-xs-6" style="height: 650px; border: 1px solid">
+	    <img class="infografias" src="./img/infog_1.jpg"/>
+		</div>
+		<div class="col-xs-6">
+			<div class="col-xs--6" style="background-color:#E3E091">
+				<div style="text-align: center;">
+			    <h3>Pingüinos de Humboldt</h3>
+					<img class="infografia2" src="./img/infog_2.jpg"/>
+				</div>
+				<div style="padding: 25px">
+					<h4>Cada vez son menos</h4>
+					<p>Decenas de pingüinos de Humboldt, una especie amenazada que anida sólo en Chile y Perú, se asolean en el islote Pájaro Niño en la costa central chilena:<strong>antes eran miles pero la actividad humana, la corriente El Niño y las ratas hacen peligrar su supervivencia</strong></p>
+				</div>
+			</div>
+			<div style="padding: 20px;">
+				<label for="name">Ingresa tú nombre..</label>
+				<input id="name" type="text" />
+				<button id="aceptar" class="btn btn-primary">Aceptar</button>
+				<p id="resultado"></p>
+			</div>
+		</div>
+	</div>				
+
+	<!-- Footer: Patrocinadores -->
+	<footer class="row section-page footer-ani">
+		<div class="col-xs-offset-4">
+				<h2>Nuestros Patrocinadores</h2>
+		</div>
+		<div class="col-xs-offset-2 col-xs-4">
+		  	<a href="http://www.greenpeace.org/usa/forests/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://www.greenpeace.org/usa/forests/', '\n\n');">
+		  		<img src="img/patrocinadores/patrocinador1.png"  width="120px" height="100px" alt="patrocinador1">
+		  	</a>
+		</div>
+		<div class="col-xs-offset-2 col-xs-4">
+	    	<a href="http://www.latam.discovery.com/animal-planet/" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://www.latam.discovery.com/animal-planet/', '\n\n');">
+			  	<img src="img/patrocinadores/patrocinador3.png" width="120px" height="100px" alt="patrocinador3">
+			  </a>
+		</div>
+	</footer>
+	<!--Terceros-->	
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		
+		$( document ).ready(function() {
+			console.log("hola pagina");
+
+			$('#aceptar').on('click', function(){
+				$('#pregunta').html("De verdad querés conocer gilastro?");
+				//document.getElementById('pregunta').innerHTML = "De verdad querés conocer gilum?";
+				var nameUser = $('#name').val();
+				$('#resultado').html("Hola " + nameUser + " para saber mas de los animales, por favor contactacte a los telefonos abajo indicados, ya que no somos gile bolu.");
+			});
+
+
+		});
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+	<!--div id="contenedor">
+			<header>
+				<nav>
+					<ul>
+						<li> <a href="#" title="Inicio"><strong>Inicio</strong></a></li>
+						<li> <a href="donde_estamos.html" title="Donde estamos"><strong>Donde estamos</strong></a></li>
+						<li> <a href="historia.html" title="Historia"><strong>Historia</strong></a></li>
+						<li> <a href="conoce_anix.html" title="Conoce Anix"><strong>Conoce Anix</strong></a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<main id="inicio">
+				<h1>Proyecto</h1>
+				<section id="Anix_logo">
+				<img src="img/Anix_logo.png" alt="logo" width="120px" height="120px"/>
+				
+				</section>
+				<h2>Que es?<br></h2>
+					<p><strong>Existen diferentes motivos por los cuales los animales se van extinguiendo poco a poco, lamentablemente la mano del hombre tiene mucho que ver con el tema. De hecho todos los días se extinguen en nuestro planeta cerca de 150 especies diferentes.<br> Es muy importante que este tipo de problema se detenga rápidamente, ya que se están viendo alterados los ecosistemas afectando a la biodiversidad, lo que causara a mediano plazo que nuestras vidas tengan cambios.
+					Somos una asociación cuya finalidad es la protección y defensa de los animales. No solo debemos cuidar a los animales por <br>razones ecologicas, tambien debemos evitar el abuso, maltrato y otras aberraciones suelen practicarse, como por ejemplo el
+	                uso de animales para pruebas de drogas medicinales.
+	                A diario el problema y el peligro aumenta sobre las especies animales de nuestro planeta, por esta razon, debemos portegerlos,<br>cuidarlos y colaborar para mejorar el numero
+	                de individuos de casa especie.</strong></p>
+					<h2 style="padding-top:30px;">El más famoso </h2>
+					<aside style="padding-bottom:40px;">
+					<div class="animal1">
+						Tigre de Bengala
+					</div>
+					<section id="animal1">
+					<img src="img/animal1.jpg" alt="animal1" width="450px" height="200px" style="padding-top:100px;"/>
+					</section>
+					<div class="animal1Txt">
+						El tigre de Bengala o indio es después del tigre siberiano, la segunda especie de tigre más grande del planeta.
+					</div>
+					</aside>
+			</main>
+		</div-->

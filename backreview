@@ -1,0 +1,45 @@
+
+        public void DoGetPartidasPendientes(
+                           Resource<empresasTipoCobranzas> resource, tipoDeCobranza tc,
+                           FiltroPartidasPendientes filtro,
+                           Action<Resource<operacionasincronica>> seguimientoAction,
+                           Action<Resource<partidasPendientes>> completeAction,
+                           Action<Exception> exAction)
+        {
+            var parametros = new Dictionary<String, String>();
+            parametros.Add("buscarSinClasificar", filtro.SinClasificar.ToString());
+            AddParameterIfHasValue("fechaDesde", filtro.FechaDesde, parametros);
+            AddParameterIfHasValue("fechaHasta", filtro.FechaHasta, parametros);
+            AddParameterIfHasValue("importeDesde", filtro.ImporteDesde, parametros);
+            AddParameterIfHasValue("importeHasta", filtro.ImporteHasta, parametros);
+            AddModoOpcion("modoUsuarios", "usuarios", filtro.UsuarioModo, filtro.Usuarios, usuario => usuario.username, parametros);
+            AddModoOpcion("modoEntidad", "codEntidades", filtro.EntidadModo, filtro.Entidades, entidad => entidad.codigo.ToString(), parametros);
+            AddModoOpcion("modoMoneda", "codMonedas", filtro.MonedaModo, filtro.Monedas, moneda => moneda.codigo, parametros);
+            AddModoOpcion("modoCodigoPartida", "codigoPartidas", filtro.PartidaModo, filtro.Codigopartidas, partida => partida.codigo.ToString(), parametros);
+
+            var uri = AbsoluteUriCreator.AddQueryParams(AbsoluteUriCreator.BuildUri(resource.Location, tc.hrefPartidasPendientes), parametros);
+            var async = new Resource<operacionasincronica>(uri);
+            ReturnAndFetch(async, seguimientoAction, completeAction, exAction);
+        }
+
+
+
+
+
+        public void ObtenerPartidasMasivas(DateTime? fechaDesde,
+                                           DateTime? fechaHasta,
+                                           string codigoProceso, 
+                                           Uri baseUri,
+                                           string href, 
+                                           codigopartidadto codigoPartidaSeleccionado,                                  
+                                           Action<Resource<codigopartidadto>> completeAction,
+                                           Action<Exception> exAction)
+        {
+            Uri uri = CreateUriFromParamsBaja(fechaDesde, fechaHasta, codigoProceso, baseUri, href, codigoPartidaSeleccionado);
+            System.Console.Write("hola sa");
+            System.Console.Write("hola sa");
+            System.Console.Write(uri);
+       //     ReturnAndFetch(new Resource<operacionasincronica>(uri),completeAction, exAction);
+        //    Client.DoGet(new Resource<consultapartidas>(AbsoluteUriCreator.BuildUri(baseUri, href)),
+         //                completeAction, exAction);
+        }
